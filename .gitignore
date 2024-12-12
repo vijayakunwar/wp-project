@@ -1,0 +1,17 @@
+
+
+#ignore everythings
+/*
+!wp-content/
+wp-content/*
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/mycustomtheme/
+
+
+# ignore all files starting with . or ~
+.*
+~*
+#track .gitignore and readme file
+!.gitignore
+!README.md
