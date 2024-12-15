@@ -1,7 +1,4 @@
-executing - index.php
-
-
-
+executing: archive.php
 
 <?php get_header(); ?>  
 

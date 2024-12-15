@@ -1,7 +1,4 @@
-executing - index.php
-
-
-
+executing: page.php
 
 <?php get_header(); ?>  
 

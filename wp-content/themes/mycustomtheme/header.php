@@ -13,12 +13,17 @@
 <body>
 
     <header>
-        <?php
-        //to get menu in pages that was define in functions.php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'header-menu', // add location  
-               // 'menu_class' => 'top-bar', // add custom nav CLASS  to use in CSS file
-            )
-        ); ?>
+        <div class="container">
+            <?php
+            //to get menu in pages that was define in functions.php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'header-menu', // add location  
+                    // 'menu_class' => 'top-bar', // add custom nav CLASS  to use in CSS file
+                )
+            ); ?>
+
+        </div>
+
+
     </header>
