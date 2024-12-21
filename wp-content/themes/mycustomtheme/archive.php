@@ -1,17 +1,32 @@
 executing: archive.php
 
-<?php get_header(); ?>  
+<?php get_header(); ?>
 
 <!-- DISPLAY all POST BY CATEGORY -->
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <h1> <?php the_title(); ?> </h1>
-        <p> <?php the_excerpt(); ?> </p>
-        <a href="<?php the_permalink(); ?>">Read More</a>
-    <?php endwhile; ?>
-<?php else : ?>
-    <p> <?php _e('Sorry, no posts matched your criteria.'); ?> </p> <!-- // it will redirect to 404 page if no post were found -->
-<?php endif; ?>
+
+<section class="page-wrap">
+    <div class="container">
+
+        <?php get_template_part('includes/section-archive'); ?>
+        <!-- Pagination with Next and Previous button -->
+         <?php previous_posts_link(); ?>
+         <?php next_posts_link(); ?>
 
 
+        <!-- Pagniation with page number -->
+        <?php
+       /*  global $wp_query;
+        $big = 999999999; // need an unlikely integer
+
+        echo paginate_links(array(
+            'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+            'format' => '?paged=%#%',
+            'current' => max(1, get_query_var('paged')),
+            'total' => $wp_query->max_num_pages
+        )); */
+        ?>
+
+    </div>
+</section>
 
 <?php get_footer(); ?>
